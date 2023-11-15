@@ -1,8 +1,8 @@
 /****************************************/
-/*          Author: Kareem Atef		    */
-/*          Date: 10-11-2023		    */
-/*          Version: 1.0				*/
-/*          Module : DIO Reg	        */
+/*          Author: Kareem Atef         */
+/*          Date: 10-11-2023            */
+/*          Version: 1.0                */
+/*          Module : DIO Reg            */
 /****************************************/
 
 #ifndef DRIVERS_MCAL_DIO_DIO_REG_H_
