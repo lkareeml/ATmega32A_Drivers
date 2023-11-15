@@ -6,9 +6,9 @@
 /****************************************/
 
 #include "./STD_Types.h"
-#include "./DIO_Reg.h"
-#include "./DIO_Def.h"
 #include "./Bit_Math.h"
+#include "./DIO_Reg.h"
+#include "./DIO_Header.h"
 
 void DIO_Set_Port_Direction(PORT Port,DIO_IO Direction){
 	if(Direction == Out){
@@ -59,7 +59,7 @@ void DIO_Set_Port_Output(PORT port,DIO_VALUE Output){
 			case PORTD:PORTD_Reg=0xFF;break;
 			default:break;
 		}
-		}else if(Output == In){
+		}else if(Output == Low){
 		switch(port){
 			case PORTA:PORTA_Reg=0x00;break;
 			case PORTB:PORTB_Reg=0x00;break;
