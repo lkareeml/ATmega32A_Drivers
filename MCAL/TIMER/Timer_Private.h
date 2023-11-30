@@ -7,50 +7,25 @@
 
 #ifndef TIMER_PRIVATE_H_
 #define TIMER_PRIVATE_H_
-/*************************************************************/
+/*******************    Timer 0/2 8-Bit **********************/
 #define Timer_M_Normal      0
 #define Timer_M_CTC         1
 #define Timer_M_FastPWM     2
 #define Timer_M_PhasePWM    3
-
-#define	Timer1_Normal								0
-#define	Timer1_PWM_Phase_Correct_8bit				1
-#define	Timer1_PWM_Phase_Correct_9bit				2
-#define	Timer1_PWM_Phase_Correct_10bit				3
-#define	Timer1_CTC_OCR1A							4
-#define	Timer1_Fast_PWM_8bit						5
-#define	Timer1_Fast_PWM_9bit						6
-#define	Timer1_Fast_PWM_10bit						7
-#define	Timer1_PWM_Phase_Frequency_Correct_ICR1		8
-#define	Timer1_PWM_Phase_Frequency_Correct_OCR1A	9
-#define	Timer1_PWM_Phase_Correct_ICR1				10
-#define	Timer1_PWM_Phase_Correct_OCR1A				11
-#define	Timer1_CTC_ICR1								12
-#define	Timer1_FastPWM_ICR1							14
-#define	Timer1_FastPWM_OCR1A						15 /// SEND PWM TO OCR1A
 /*************************************************************/
 #define Timer_Pre_1         1
 #define Timer_Pre_8         2
 #define Timer_Pre_64        3
 #define Timer_Pre_256       4
 #define Timer_Pre_1024      5
-
-#define Timer_Pre_STOP		0
-#define Timer_Pre_External_T1_Falling 6
-#define Timer_Pre_External_T1_Raising 7
 /*************************************************************/
 #define Timer_COM_Pin_OFF       0
 #define Timer_COM_Pin_TOGGLE    1
-#define Timer_COM_Pin_SET       2	//INVERT
-#define Timer_COM_Pin_CLEAR     3	//NON INVERT
+#define Timer_COM_Pin_SET       2    //INVERT
+#define Timer_COM_Pin_CLEAR     3    //NON INVERT
 /*************************************************************/
-#define IC_Noise_Canceler_OFF		0
-#define IC_Noise_Canceler_ON		1
-
-/*************************************************************/
-#define TIMSK_Reg       (*(volatile uint8*)0x59)
-#define TIFR_Reg        (*(volatile uint8*)0x58)
-/*************************************************************/
+#define TIMSK_Reg    (*(volatile uint8*)0x59)
+#define TIFR_Reg     (*(volatile uint8*)0x58)
 #define TCCR0_Reg    (*(volatile uint8*)0x53)
 #define TCNT0_Reg    (*(volatile uint8*)0x52)
 #define OCR0_Reg     (*(volatile uint8*)0x5C)
@@ -59,6 +34,41 @@
 #define OCR2_Reg     (*(volatile uint8*)0x43)
 /*************************************************************/
 /*******************    Timer 1 16-Bit  **********************/
+#define    Timer1_Normal                               0
+#define    Timer1_PWM_Phase_Correct_8bit               1
+#define    Timer1_PWM_Phase_Correct_9bit               2
+#define    Timer1_PWM_Phase_Correct_10bit              3
+#define    Timer1_CTC_OCR1A                            4
+#define    Timer1_Fast_PWM_8bit                        5
+#define    Timer1_Fast_PWM_9bit                        6
+#define    Timer1_Fast_PWM_10bit                       7
+#define    Timer1_PWM_Phase_Frequency_Correct_ICR1     8
+#define    Timer1_PWM_Phase_Frequency_Correct_OCR1A    9
+#define    Timer1_PWM_Phase_Correct_ICR1               10
+#define    Timer1_PWM_Phase_Correct_OCR1A              11
+#define    Timer1_CTC_ICR1                             12
+#define    Timer1_FastPWM_ICR1                         14
+#define    Timer1_FastPWM_OCR1A                        15 /// SEND PWM TO OCR1A
+/*************************************************************/
+// #define Timer_Pre_1                     1
+// #define Timer_Pre_8                     2
+// #define Timer_Pre_64                    3
+// #define Timer_Pre_256                   4
+// #define Timer_Pre_1024                  5
+#define Timer_Pre_STOP                     0
+#define Timer_Pre_External_T1_Falling      6
+#define Timer_Pre_External_T1_Raising      7
+/*************************************************************/
+#define Enabled                      1
+#define Disabled                     0
+/*************************************************************/
+#define Timer1_IC_Raising_Edge       1
+#define Timer1_IC_Falling_Edge       0
+/*************************************************************/
+#define Normal_Disconnect            0
+#define Toggle_WGM_9_14_15_OC1A      1
+#define Clear_OC1A_OC1B_Non_Inv      2
+#define Set_OC1A_OC1B_Inv            3
 /*************************************************************/
 #define TCNT1H_Reg      (*(volatile uint8*)0x4D) // High
 #define TCNT1L_Reg      (*(volatile uint8*)0x4C) // LOW

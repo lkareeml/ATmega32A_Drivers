@@ -32,4 +32,13 @@ void Timer1_Set_TCNT1_Reg(uint16 value);
 void Timer1_Set_OCR1A_Reg(uint16 value);
 void Timer1_Set_OCR1B_Reg(uint16 value);
 
+void Timer1_Input_Capture_Interrupt_Enable();
+void Timer1_Input_Capture_Interrupt_Disable();
+void Timer1_Compare_A_Interrupt_Enable();
+void Timer1_Compare_A_Interrupt_Disable();
+void Timer1_Compare_B_Interrupt_Enable();
+void Timer1_Compare_B_Interrupt_Disable();
+void Timer1_Overflow_Interrupt_Enable();
+void Timer1_Overflow_Interrupt_Disable();
+
 #endif /* TIMER_INIT_H_ */
