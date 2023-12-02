@@ -12,8 +12,9 @@
 #define Enabled            1
 #define Async_Mode         0
 #define Sync_Mode          1
-#define Parity_Even        2
-#define Parity_Odd         3
+#define Parity_Disable     0
+#define Parity_Even        1
+#define Parity_Odd         2
 #define Stop1_Bit          0
 #define Stop2_Bit          1
 #define Comm_Size_5        5
@@ -24,6 +25,10 @@
 #define TX_Rising_XCK      0
 #define TX_Falling_XCK     1
 
+
+uint8 String_Comparitor(uint8 *String1,uint8 *String2);
+
+
 void   UART_Init();
 
 void   UART_Send_Byte_Polling8(uint8 Data);
@@ -33,7 +38,7 @@ void   UART_Recieve_String8(uint8 *String);
 
 void   UART_Send_Byte_Polling16(uint16 Data);
 uint16 UART_Receive_Byte16(void);
-void   UART_Send_String_Polling16(uint16 *String);
-void   UART_Recieve_String16(uint16 *String);
+void   UART_Send_String_Polling16(sint16 *String);
+void   UART_Recieve_String16(sint16 *String);
 
 #endif /* UART_H_ */
