@@ -8,10 +8,10 @@
 #ifndef STD_H_INCLUDED
 #define STD_H_INCLUDED
 typedef unsigned char uint8;
-typedef char int8;
+typedef char sint8;
 typedef unsigned short uint16;
-typedef short int16;
+typedef short sint16;
 typedef unsigned int uint32;
-typedef int int32;
+typedef int sint32;
 typedef enum {false, true} bool;
 #endif

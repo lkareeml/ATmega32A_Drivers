@@ -13,27 +13,14 @@
 #define GICR_Reg        *((volatile uint8*)0x5B) // General Interrupt
 #define GIFR_Reg        *((volatile uint8*)0x5A) // General Interrupt
 #define SPMCR_Reg       *((volatile uint8*)0x57)
-#define TWCR_Reg        *((volatile uint8*)0x56)
-#define MCUCR_Reg       *((volatile uint8*)0x55)  /////////////
-#define MCUCSR_Reg      *((volatile uint8*)0x54)  /////////////
+#define MCUCR_Reg       *((volatile uint8*)0x55) /////////////
+#define MCUCSR_Reg      *((volatile uint8*)0x54) /////////////
 #define OSCCAL_Reg      *((volatile uint8*)0x51)
 #define OCDR_Reg        *((volatile uint8*)0x51)
 #define SFIOR_Reg       *((volatile uint8*)0x50) /////////////
-#define EEARH_Reg       *((volatile uint8*)0x3F)
-#define EEARL_Reg       *((volatile uint8*)0x3E)
-#define EEDR_Reg        *((volatile uint8*)0x3D)
-#define EECR_Reg        *((volatile uint8*)0x3C)
 #define ASSR_Reg        *((volatile uint8*)0x42)
 #define WDTCR_Reg       *((volatile uint8*)0x41)
-#define SPDR_Reg        *((volatile uint8*)0x2F)
-#define SPSR_Reg        *((volatile uint8*)0x2E)
-#define SPCR_Reg        *((volatile uint8*)0x2D)
 #define ACSR_Reg        *((volatile uint8*)0x28)
-#define TWDR_Reg        *((volatile uint8*)0x23)
-#define TWAR_Reg        *((volatile uint8*)0x22)
-#define TWSR_Reg        *((volatile uint8*)0x21)
-#define TWBR_Reg        *((volatile uint8*)0x20)
-
 
 #define PORTA_Reg       *((volatile uint8*)0x3B) // GPIO
 #define DDRA_Reg        *((volatile uint8*)0x3A) // GPIO
@@ -79,5 +66,19 @@
 #define UCSRA_Reg       *((volatile uint8*)0x2B) // UART
 #define UCSRB_Reg       *((volatile uint8*)0x2A) // UART
 
+#define SPDR_Reg        *((volatile uint8*)0x2F) // SPI
+#define SPSR_Reg        *((volatile uint8*)0x2E) // SPI
+#define SPCR_Reg        *((volatile uint8*)0x2D) // SPI
+
+#define TWCR_Reg        *((volatile uint8*)0x56) // TWI (I2C)
+#define TWDR_Reg        *((volatile uint8*)0x23) // TWI (I2C)
+#define TWAR_Reg        *((volatile uint8*)0x22) // TWI (I2C)
+#define TWSR_Reg        *((volatile uint8*)0x21) // TWI (I2C)
+#define TWBR_Reg        *((volatile uint8*)0x20) // TWI (I2C)
+
+#define EEARH_Reg       *((volatile uint8*)0x3F) // EEPROM INTERNAL
+#define EEARL_Reg       *((volatile uint8*)0x3E) // EEPROM INTERNAL
+#define EEDR_Reg        *((volatile uint8*)0x3D) // EEPROM INTERNAL
+#define EECR_Reg        *((volatile uint8*)0x3C) // EEPROM INTERNAL
 
 #endif /* ARV32A_REGISTERS_H_ */
