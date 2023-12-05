@@ -13,6 +13,7 @@
 /********************************    Timer 1    ************************************/
 // In Timer1 There Are 8 Main Registers : 
 // TCCR1A -- TCCR1B -- (TCNT1H/L) -- (OCR1AH/L) -- (OCR1BH/L) -- (ICR1H/L) -- (TIMSK) -- (TIFR)
+//ASCR 
 
 void Timer1_Init(){
     /***********************   Timer1 ALL 15 Modes   **************************/
@@ -119,14 +120,19 @@ void Timer1_Init(){
     //Clear the reserved pin to ensure compatibility :
     Clear(TCCR1B_Reg,5);
 }
+
 void Timer1_Enable_Input_Capture_Interrupt()    {      Set(TIMSK_Reg,5);     } // TIMSK
 void Timer1_Disable_Input_Capture_Interrupt()   {    Clear(TIMSK_Reg,5);     } // TIMSK
+
 void Timer1_Enable_Compare_A_Interrupt()        {      Set(TIMSK_Reg,4);     } // TIMSK
 void Timer1_Disable_Compare_A_Interrupt()       {    Clear(TIMSK_Reg,4);     } // TIMSK
+
 void Timer1_Enable_Compare_B_Interrupt()        {      Set(TIMSK_Reg,3);     } // TIMSK
 void Timer1_Disable_Compare_B_Interrupt()       {    Clear(TIMSK_Reg,3);     } // TIMSK
+
 void Timer1_Enable_Overflow_Interrupt()         {      Set(TIMSK_Reg,2);     } // TIMSK
 void Timer1_Disable_Overflow_Interrupt()        {    Clear(TIMSK_Reg,2);     } // TIMSK
+
 uint8 Timer1_Read_IC_Interrupt_Flag()           {    return Get(TIFR_Reg,5); } // TIFR 
 uint8 Timer1_Read_OCA_Interrupt_Flag()          {    return Get(TIFR_Reg,4); } // TIFR 
 uint8 Timer1_Read_OCB_Interrupt_Flag()          {    return Get(TIFR_Reg,3); } // TIFR 
@@ -195,7 +201,6 @@ void Timer0_Enable_CTC_Interrupt()       {    Set(TIMSK_Reg,1);    }
 void Timer0_Disable_CTC_Interrupt()      {    Clear(TIMSK_Reg,1);  }
 
 /******************************    END Timer 0    **********************************/
-
 
 /********************************    Timer 2    ************************************/
 void Timer2_Init(){

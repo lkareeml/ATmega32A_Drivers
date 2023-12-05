@@ -105,14 +105,14 @@ void UART_Init(){
         while(Get(UCSRA_Reg,7) == 0);// Polling Method
         return UDR_Reg;
     }
-    void UART_Send_String_Polling8(uint8 *String){
+    void UART_Send_String_Polling8(sint8 String[]){
         uint8 count = 0;
         while(String[count] != '\0'){
             UART_Send_Byte_Polling8(String[count]);
             count++;
         }
     }
-    void UART_Recieve_String8(uint8 *String){
+    void UART_Recieve_String8(sint8 *String){
         uint8 count = 0;
         while(1){
 			String[count] = UART_Receive_Byte8();
@@ -148,7 +148,7 @@ void UART_Init(){
         }
         return Received_Data;
     }
-    void UART_Send_String_Polling16(sint16 *String){
+    void UART_Send_String_Polling16(sint16 String){
         uint8 count = 0;
         while(String[count] != '\0'){
             UART_Send_Byte_Polling16(String[count]);

@@ -260,6 +260,9 @@ void App_013_ISR()
     x= KEYPAD_Get_Pressed_Key();
     LCD_Send_Char(x);
 }
+
+
+
 void App_014_LED_BUTTON_INTERRUPT()
 {
     LED0_Init();
@@ -267,10 +270,13 @@ void App_014_LED_BUTTON_INTERRUPT()
     EXTI0_Set_Internal_Pull_Up();
     LED_0_Off();
     EXTI0_Init();
-    EXTI0_Enable();
-    GIE_Enable();
-    while(1);
+    EXTI0_Enable();//PIE
+    GIE_Enable();//GIE
+    while(1){
+		
+	}
 }
+
 void App_014_ISR()
 {
     static uint8 EXTI0_Flag = 0;
