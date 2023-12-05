@@ -33,8 +33,8 @@ void   UART_Init();
 
 void   UART_Send_Byte_Polling8(uint8 Data);
 uint8  UART_Receive_Byte8(void);
-void   UART_Send_String_Polling8(uint8 *String);
-void   UART_Recieve_String8(uint8 *String);
+void   UART_Send_String_Polling8(sint8 *String);
+void   UART_Recieve_String8(sint8 *String);
 
 void   UART_Send_Byte_Polling16(uint16 Data);
 uint16 UART_Receive_Byte16(void);

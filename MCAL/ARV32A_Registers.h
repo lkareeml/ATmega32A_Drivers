@@ -20,7 +20,7 @@
 #define SFIOR_Reg       *((volatile uint8*)0x50) /////////////
 #define ASSR_Reg        *((volatile uint8*)0x42)
 #define WDTCR_Reg       *((volatile uint8*)0x41)
-#define ACSR_Reg        *((volatile uint8*)0x28)
+#define ACSR_Reg        *((volatile uint8*)0x28) // TIMER1 BIT1 
 
 #define PORTA_Reg       *((volatile uint8*)0x3B) // GPIO
 #define DDRA_Reg        *((volatile uint8*)0x3A) // GPIO
