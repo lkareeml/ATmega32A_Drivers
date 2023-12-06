@@ -10,7 +10,6 @@
 - UART
 - SPI
 - I2C
-- EEPROM
 ### HAL Folder (Hardware Abstruction layer)
 #### For External Drivers such as : LCD and Keypad
 - Seven Segment
@@ -24,6 +23,7 @@
 - Servo
 - Bluetooth
 - TTL USB
+- EEPROM
 ### Completed_APPs Folder (Completed Micro Applications)
 #### For Customized Apps Using the Previous Drivers and Completed Development:
 - App_019_TIMER_FASTPWM_LED
