@@ -148,11 +148,12 @@ void LCD_Position_Handler(Dir Direction){
 	
 }
 
-void LCD_Send_String(char * str){
+void LCD_Send_String(sint8 * str){
 	uint8 index =0;
 	while(str[index] != '\0'){
 		LCD_Send_Char(str[index]);
 		index++;
+		_delay_ms(10);
 	}
 	_delay_ms(5);
 }

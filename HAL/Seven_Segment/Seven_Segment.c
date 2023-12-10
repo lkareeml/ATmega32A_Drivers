@@ -8,7 +8,7 @@
 #include "../../MCAL/DIO/STD_Types.h"
 #include "../../MCAL/DIO/DIO_Header.h"
 
-void SSEG_Void_Init(){
+void SSEG_Init(){
 	DIO_Set_Pin_Direction(PORTB,1,Out);///EN2	PB1
 	DIO_Set_Pin_Direction(PORTB,2,Out);///EN1	PB2
 	DIO_Set_Pin_Direction(PORTB,3,Out);///DIP	PB3
@@ -18,7 +18,7 @@ void SSEG_Void_Init(){
 	DIO_Set_Pin_Direction(PORTA,7,Out);///D		PA7
 }
 
-void SSEG_Void_Diaplay(uint8 segmentID, uint8 data){
+void SSEG_Diaplay(uint8 segmentID, uint8 data){
 	if(segmentID == 0){
 		DIO_Set_Pin_Output(PORTB,1,Low);///EN2 Disable Low
 		DIO_Set_Pin_Output(PORTB,2,High);///EN1 Enable High

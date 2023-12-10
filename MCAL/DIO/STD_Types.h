@@ -11,7 +11,7 @@ typedef unsigned char uint8;
 typedef char sint8;
 typedef unsigned short uint16;
 typedef short sint16;
-typedef unsigned int uint32;
+typedef long unsigned int uint32;
 typedef int sint32;
 typedef enum {false, true} bool;
 #endif

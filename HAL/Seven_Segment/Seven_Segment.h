@@ -8,8 +8,8 @@
 #ifndef DRIVERS_SEVENSEGMENT_SSEG_H_
 #define DRIVERS_SEVENSEGMENT_SSEG_H_
 
-void SSEG_Void_Init();
-void SSEG_Void_Diaplay(uint8 segmentID, uint8 data);
+void SSEG_Init();
+void SSEG_Diaplay(uint8 segmentID, uint8 data);
 
 #endif
 

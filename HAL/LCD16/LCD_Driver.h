@@ -15,7 +15,7 @@ typedef enum{
 void LCD_Init();
 void LCD_Send_Cmd(uint8 cmd);
 void LCD_Send_Char(uint8 data);
-void LCD_Send_String(char * str);
+void LCD_Send_String(sint8 * str);
 void LCD_Set_Cursor_Position(uint8 row, uint8 col);
 void LCD_Send_Clear_Screen();
 void LCD_Cursor_Shift(Dir Direction);
