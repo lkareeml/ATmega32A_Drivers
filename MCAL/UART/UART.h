@@ -28,17 +28,32 @@
 
 uint8 String_Comparitor(uint8 *String1,uint8 *String2);
 
+void UART_Dynamic_INIT(uint8 CommSize,uint8 SyncMode,uint8 SyncPolarity,uint8 ParityMode,uint8 Stopbit,uint8 X2SpeedMode,uint32 baudRate);
+void UART_Enable_TX();
+void UART_Disable_TX();
+void UART_Enable_RX();
+void UART_Disable_RX();
+void UART_Enable_TX_Interrupt();
+void UART_Disable_TX_Interrupt();
+void UART_Enable_RX_Interrupt();
+void UART_Disable_RX_Interrupt();
+void UART_Enable_DataReg_Empty_Interrupt();
+void UART_Disable_DataReg_Empty_Interrupt();
 
 void   UART_Init();
 
-void   UART_Send_Byte_Polling8(uint8 Data);
-uint8  UART_Receive_Byte8(void);
-void   UART_Send_String_Polling8(sint8 *String);
-void   UART_Recieve_String8(sint8 *String);
+void   UART_Send_Byte_Polling_8(uint8 Data);
+uint8  UART_Receive_Byte_8(void);
 
-void   UART_Send_Byte_Polling16(uint16 Data);
-uint16 UART_Receive_Byte16(void);
-void   UART_Send_String_Polling16(sint16 *String);
-void   UART_Recieve_String16(sint16 *String);
+void   UART_Send_String_Polling_8(sint8 *String);
+void   UART_Recieve_String_8(sint8 *String);
+
+void   UART_Send_Number_Polling_32(uint32 Number);
+uint32 UART_Recieve_Number_Polling_32(void);
+
+// void   UART_Send_Byte_Polling16(uint16 Data);
+// uint16 UART_Receive_Byte16(void);
+// void   UART_Send_String_Polling16(uint16 *String);
+// void   UART_Recieve_String16(uint16 *String);
 
 #endif /* UART_H_ */

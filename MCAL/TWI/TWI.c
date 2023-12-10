@@ -42,17 +42,18 @@ void TWI_Interrupt_Disable(){Clear(TWCR_Reg,0);}
 void TWI_Send_Stop()
 {
 	//TWCR_Reg = 0;
-	Set(TWCR_Reg,4);//SEND STOP
-	Set(TWCR_Reg,2);//ENABLE TWI
-	Set(TWCR_Reg,7);//INTERRUPT FLAG CLEAR
+// 	Set(TWCR_Reg,4);//SEND STOP
+// 	Set(TWCR_Reg,2);//ENABLE TWI
+// 	Set(TWCR_Reg,7);//INTERRUPT FLAG CLEAR
+	TWCR_Reg =   (1<<4)  | (1<<2) |(1<<7);
 	//TWCR_Reg =  0b10010100;
 }
 void TWI_MSTR_Send_Start()
 {
-	Set(TWCR_Reg,5);// SEND START
-	Set(TWCR_Reg,2);// Enable TWI
-	Set(TWCR_Reg,7);// INTERRUPT FLAG CLEAR
-	//TWCR_Reg =   (1<<5)  | (1<<2) |(1<<7);
+// 	Set(TWCR_Reg,5);// SEND START
+// 	Set(TWCR_Reg,2);// Enable TWI
+// 	Set(TWCR_Reg,7);// INTERRUPT FLAG CLEAR
+	TWCR_Reg =   (1<<5)  | (1<<2) |(1<<7);
 	while(Get(TWCR_Reg ,7)  == 0);//Wait till Send Successfully(INT_FLAG DOWN)
 }
 void TWI_Set_My_Address(uint8 Address)
@@ -62,8 +63,9 @@ void TWI_Set_My_Address(uint8 Address)
 uint8 TWI_Receive_Data(uint8 ACK_State){
 	if(ACK_State == 1)
 		Set(TWCR_Reg,6);		//SEND ACK IF Input is 1 for ACK
-	Set(TWCR_Reg,2);			//Enable TWI
-	Set(TWCR_Reg,7);			//Set Interrupt Flag to Clear it
+// 	Set(TWCR_Reg,2);			//Enable TWI
+// 	Set(TWCR_Reg,7);			//Set Interrupt Flag to Clear it
+	TWCR_Reg =   (1<<7)| (1<<2);
 	while(Get(TWCR_Reg,7)== 0);	//Wait for flag to be 0
 	return TWDR_Reg;			//Send back DATA Received Value
 }

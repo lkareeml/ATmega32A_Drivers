@@ -13,7 +13,7 @@
 #define Timer2_Mode            Timer_M_CTC
 
 //    Timer_Pre_1 Timer_Pre_8 Timer_Pre_1024 Timer_Pre_256 Timer_Pre_64 
-#define Timer0_PreScaler    Timer_Pre_64
+#define Timer0_PreScaler    Timer_Pre_1024
 #define Timer2_PreScaler    Timer_Pre_1024
 
 //    Timer_COM_Pin_OFF        Timer_COM_Pin_CLEAR
