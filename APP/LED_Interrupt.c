@@ -1,3 +1,16 @@
+void LED_2_Toggle(uint8 *flag_2){
+	if(*flag_2 == 0){LED_2_On();*flag_2 = 1;}
+	else if(*flag_2 == 1){LED_2_Off();*flag_2 = 0;}
+}
+void LED_1_Toggle(uint8 *flag_1){
+	if(*flag_1 == 0){LED_1_On();*flag_1 = 1;}
+	else if(*flag_1 == 1){LED_1_Off();*flag_1 = 0;}
+}
+
+void LED_0_Toggle(uint8 *flag_0){
+	if(*flag_0 == 0){LED_0_On();*flag_0 = 1;}
+	else if(*flag_0 == 1){LED_0_Off();*flag_0 = 0;}
+}
 
 void App_040_TIMER_LED() {
 	LED0_Init();LED1_Init();LED2_Init();
